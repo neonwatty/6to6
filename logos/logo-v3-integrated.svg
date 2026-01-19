@@ -1,0 +1,34 @@
+<svg viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left 6 with sun as the circle -->
+  <g transform="translate(25, 25)">
+    <!-- Stem of 6 -->
+    <path d="M 8 -18 Q -2 -10 -2 0"
+          fill="none" stroke="#b45309" stroke-width="6" stroke-linecap="round"/>
+    <!-- Sun circle (bottom of 6) -->
+    <circle cx="0" cy="8" r="10" fill="#f59e0b"/>
+    <!-- Sun rays -->
+    <g stroke="#fbbf24" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-4" x2="0" y2="-7"/>
+      <line x1="12" y1="8" x2="15" y2="8"/>
+      <line x1="-12" y1="8" x2="-15" y2="8"/>
+      <line x1="0" y1="20" x2="0" y2="23"/>
+      <line x1="8.5" y1="-0.5" x2="10.5" y2="-2.5"/>
+      <line x1="-8.5" y1="-0.5" x2="-10.5" y2="-2.5"/>
+      <line x1="8.5" y1="16.5" x2="10.5" y2="18.5"/>
+      <line x1="-8.5" y1="16.5" x2="-10.5" y2="18.5"/>
+    </g>
+  </g>
+
+  <!-- "to" text in middle -->
+  <text x="70" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#92400e">to</text>
+
+  <!-- Right 6 with moon as the circle -->
+  <g transform="translate(115, 25)">
+    <!-- Stem of 6 -->
+    <path d="M 8 -18 Q -2 -10 -2 0"
+          fill="none" stroke="#4338ca" stroke-width="6" stroke-linecap="round"/>
+    <!-- Moon crescent (bottom of 6) -->
+    <circle cx="0" cy="8" r="10" fill="#6366f1"/>
+    <circle cx="5" cy="4" r="7" fill="#fef3c7"/>
+  </g>
+</svg>

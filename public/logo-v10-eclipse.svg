@@ -1,0 +1,21 @@
+<svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- 6 -->
+  <text x="20" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#b45309">6</text>
+
+  <!-- Sun/Moon eclipse style - sun with moon crescent overlay -->
+  <circle cx="60" cy="25" r="12" fill="#f59e0b"/>
+  <!-- Moon crescent cutting into sun -->
+  <circle cx="66" cy="21" r="9" fill="#fef3c7"/>
+
+  <!-- Sun rays peeking out -->
+  <g stroke="#fbbf24" stroke-width="2" stroke-linecap="round">
+    <line x1="60" y1="8" x2="60" y2="3"/>
+    <line x1="45" y1="25" x2="40" y2="25"/>
+    <line x1="60" y1="42" x2="60" y2="47"/>
+    <line x1="48" y1="13" x2="44" y2="9"/>
+    <line x1="48" y1="37" x2="44" y2="41"/>
+  </g>
+
+  <!-- 6 -->
+  <text x="100" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#b45309">6</text>
+</svg>
