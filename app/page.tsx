@@ -177,7 +177,7 @@ export default function Home() {
               <>
                 <div className="flex flex-col items-center gap-1 sm:gap-2">
                   <p className="text-amber-700 dark:text-amber-300 text-base sm:text-lg">
-                    Each of your daytime hours is
+                    Where you live, a Roman hour would be
                   </p>
                   <div className="text-6xl sm:text-7xl font-bold text-amber-900 dark:text-amber-100 tabular-nums">
                     {formatMinutes(temporal.dayHourMinutes)}
@@ -219,6 +219,20 @@ export default function Home() {
               </>
             )}
 
+            {!temporal.isPolardayOrNight && (
+              <TimeComparison
+                sunriseHour={temporal.sunrise.getHours() + temporal.sunrise.getMinutes() / 60}
+                sunsetHour={temporal.sunset.getHours() + temporal.sunset.getMinutes() / 60}
+                dayHourMinutes={temporal.dayHourMinutes}
+              />
+            )}
+
+            <YearChart
+              latitude={location.latitude}
+              longitude={location.longitude}
+              currentDate={date}
+            />
+
             <button
               onClick={handleShare}
               className="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-full transition-colors shadow-lg flex items-center gap-2"
@@ -228,19 +242,6 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
               </svg>
             </button>
-
-            <YearChart
-              latitude={location.latitude}
-              longitude={location.longitude}
-              currentDate={date}
-            />
-
-            {!temporal.isPolardayOrNight && (
-              <TimeComparison
-                sunriseHour={temporal.sunrise.getHours() + temporal.sunrise.getMinutes() / 60}
-                sunsetHour={temporal.sunset.getHours() + temporal.sunset.getMinutes() / 60}
-              />
-            )}
           </div>
         )}
       </main>
