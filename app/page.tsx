@@ -255,7 +255,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="hover:text-amber-700 dark:hover:text-amber-300 transition-colors"
           >
-            Neon Watty
+            @neonwatty
           </a>
         </p>
       </footer>
