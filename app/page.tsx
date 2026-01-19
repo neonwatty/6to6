@@ -92,8 +92,8 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gradient-to-b from-amber-50 to-orange-100 dark:from-slate-900 dark:to-slate-800">
-      <main className="flex flex-col items-center gap-8 max-w-lg text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 bg-gradient-to-b from-amber-50 to-orange-100 dark:from-slate-900 dark:to-slate-800">
+      <main className="flex flex-col items-center gap-6 sm:gap-8 max-w-lg text-center w-full">
         <h1 className="flex flex-col items-center gap-2">
           <Logo size={100} />
           <span className="sr-only">6 to 6</span>
@@ -158,7 +158,7 @@ export default function Home() {
         )}
 
         {location.status === 'success' && temporal && (
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-6 sm:gap-8 w-full">
             {temporal.isPolardayOrNight ? (
               <div className="flex flex-col items-center gap-4">
                 <div className="text-6xl">
@@ -175,14 +175,14 @@ export default function Home() {
               </div>
             ) : (
               <>
-                <div className="flex flex-col items-center gap-2">
-                  <p className="text-amber-700 dark:text-amber-300 text-lg">
+                <div className="flex flex-col items-center gap-1 sm:gap-2">
+                  <p className="text-amber-700 dark:text-amber-300 text-base sm:text-lg">
                     Each of your daytime hours is
                   </p>
-                  <div className="text-7xl font-bold text-amber-900 dark:text-amber-100 tabular-nums">
+                  <div className="text-6xl sm:text-7xl font-bold text-amber-900 dark:text-amber-100 tabular-nums">
                     {formatMinutes(temporal.dayHourMinutes)}
                   </div>
-                  <p className="text-amber-700 dark:text-amber-300 text-lg">
+                  <p className="text-amber-700 dark:text-amber-300 text-base sm:text-lg">
                     real minutes
                   </p>
                 </div>

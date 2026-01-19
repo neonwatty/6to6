@@ -14,16 +14,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "6 to 6",
-  description: "What if sunrise was always at 6:00 and sunset always at 18:00? It used to be.",
+  description: "What if sunrise was always at 6:00 AM and sunset always at 6:00 PM? See how long your Roman hours would be today.",
   openGraph: {
     title: "6 to 6",
-    description: "What if sunrise was always at 6:00 and sunset always at 18:00? It used to be.",
+    description: "What if sunrise was always at 6:00 AM and sunset always at 6:00 PM? See how long your Roman hours would be today.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "6 to 6",
-    description: "What if sunrise was always at 6:00 and sunset always at 18:00? It used to be.",
+    description: "What if sunrise was always at 6:00 AM and sunset always at 6:00 PM? See how long your Roman hours would be today.",
+  },
+  other: {
+    "theme-color": "#fef3c7",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
   },
 };
 

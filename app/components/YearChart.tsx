@@ -53,7 +53,7 @@ export default function YearChart({ latitude, longitude, currentDate = new Date(
   const currentDayData = yearData[currentDayOfYear] || yearData[0];
 
   return (
-    <div className="w-full max-w-sm">
+    <div className="w-full px-2 sm:px-0 sm:max-w-sm">
       <h3 className="text-sm font-medium text-amber-800 dark:text-amber-200 mb-2 text-center">
         Hour Length Throughout the Year
       </h3>
