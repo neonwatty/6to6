@@ -245,6 +245,20 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      <footer className="mt-12 pb-6">
+        <p className="text-xs text-amber-600/50 dark:text-amber-400/50">
+          Made by{' '}
+          <a
+            href="https://neonwatty.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-amber-700 dark:hover:text-amber-300 transition-colors"
+          >
+            Neon Watty
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
