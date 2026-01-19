@@ -1,0 +1,20 @@
+<svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- 6 -->
+  <text x="22" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#b45309">6</text>
+
+  <!-- Sun as separator (implies "to") -->
+  <circle cx="60" cy="25" r="11" fill="#f59e0b"/>
+  <g stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round">
+    <line x1="60" y1="8" x2="60" y2="2"/>
+    <line x1="60" y1="42" x2="60" y2="48"/>
+    <line x1="77" y1="25" x2="83" y2="25"/>
+    <line x1="43" y1="25" x2="37" y2="25"/>
+    <line x1="72" y1="13" x2="76" y2="9"/>
+    <line x1="48" y1="13" x2="44" y2="9"/>
+    <line x1="72" y1="37" x2="76" y2="41"/>
+    <line x1="48" y1="37" x2="44" y2="41"/>
+  </g>
+
+  <!-- 6 -->
+  <text x="98" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#b45309">6</text>
+</svg>

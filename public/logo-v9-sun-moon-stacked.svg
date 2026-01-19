@@ -1,0 +1,23 @@
+<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- 6 -->
+  <text x="20" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#b45309">6</text>
+
+  <!-- Sun on top -->
+  <circle cx="60" cy="18" r="9" fill="#f59e0b"/>
+  <g stroke="#fbbf24" stroke-width="2" stroke-linecap="round">
+    <line x1="60" y1="4" x2="60" y2="0"/>
+    <line x1="73" y1="18" x2="77" y2="18"/>
+    <line x1="47" y1="18" x2="43" y2="18"/>
+    <line x1="69.4" y1="8.6" x2="72.2" y2="5.8"/>
+    <line x1="50.6" y1="8.6" x2="47.8" y2="5.8"/>
+  </g>
+
+  <!-- Moon on bottom (crescent) -->
+  <path d="M 60 36
+           A 9 9 0 1 1 60 54
+           A 6 6 0 1 0 60 36"
+        fill="#6366f1"/>
+
+  <!-- 6 -->
+  <text x="100" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#b45309">6</text>
+</svg>

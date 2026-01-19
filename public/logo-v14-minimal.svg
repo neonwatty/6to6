@@ -1,0 +1,16 @@
+<svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left 6 -->
+  <text x="15" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="300" fill="#78350f">6</text>
+
+  <!-- Thin line -->
+  <line x1="28" y1="20" x2="42" y2="20" stroke="#d97706" stroke-width="1"/>
+
+  <!-- to -->
+  <text x="50" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="300" fill="#92400e">to</text>
+
+  <!-- Thin line -->
+  <line x1="58" y1="20" x2="72" y2="20" stroke="#d97706" stroke-width="1"/>
+
+  <!-- Right 6 -->
+  <text x="85" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="300" fill="#78350f">6</text>
+</svg>

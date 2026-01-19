@@ -1,0 +1,16 @@
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <circle cx="40" cy="40" r="36" fill="none" stroke="#b45309" stroke-width="3"/>
+
+  <!-- Inner warm gradient circle -->
+  <circle cx="40" cy="40" r="28" fill="#fef3c7"/>
+
+  <!-- 6 on left -->
+  <text x="22" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#b45309">6</text>
+
+  <!-- to in center -->
+  <text x="40" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#92400e">to</text>
+
+  <!-- 6 on right -->
+  <text x="58" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#b45309">6</text>
+</svg>

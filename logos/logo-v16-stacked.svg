@@ -1,0 +1,10 @@
+<svg viewBox="0 0 50 90" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top 6 (sunrise) -->
+  <text x="25" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#f59e0b">6</text>
+
+  <!-- "to" rotated/vertical feel -->
+  <text x="25" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#92400e">to</text>
+
+  <!-- Bottom 6 (sunset) -->
+  <text x="25" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#c2410c">6</text>
+</svg>
