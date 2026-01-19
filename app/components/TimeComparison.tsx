@@ -3,9 +3,10 @@
 interface TimeComparisonProps {
   sunriseHour: number; // e.g., 6.5 for 6:30 AM
   sunsetHour: number;  // e.g., 17.5 for 5:30 PM
+  dayHourMinutes: number; // e.g., 49.5 for winter, 70 for summer
 }
 
-export default function TimeComparison({ sunriseHour, sunsetHour }: TimeComparisonProps) {
+export default function TimeComparison({ sunriseHour, sunsetHour, dayHourMinutes }: TimeComparisonProps) {
   // Visualization dimensions
   const width = 280;
   const height = 60;
@@ -21,8 +22,16 @@ export default function TimeComparison({ sunriseHour, sunsetHour }: TimeComparis
   };
 
   // For Roman time, sunrise is always at "6" and sunset at "18"
-  const romanSunriseX = hourToX(6);
-  const romanSunsetX = hourToX(18);
+  // But we position the markers based on where they fall in modern time
+  const romanSunriseX = hourToX(sunriseHour);
+  const romanSunsetX = hourToX(sunsetHour);
+
+  // Convert Roman hour to modern hour position
+  // Roman 6:00 = sunriseHour, each subsequent hour adds dayHourMinutes/60
+  const romanHourToModernHour = (romanHour: number) => {
+    const hoursAfterSunrise = romanHour - 6;
+    return sunriseHour + (hoursAfterSunrise * dayHourMinutes / 60);
+  };
 
   // For modern time, sunrise/sunset are at actual times
   const modernSunriseX = hourToX(sunriseHour);
@@ -32,7 +41,7 @@ export default function TimeComparison({ sunriseHour, sunsetHour }: TimeComparis
     <div className="w-full sm:max-w-sm bg-amber-50/50 dark:bg-slate-800/50 rounded-xl p-3 sm:p-4 border border-amber-200 dark:border-slate-700">
       {/* Header */}
       <p className="text-sm font-medium text-amber-800 dark:text-amber-200 text-center mb-4">
-        How Roman hours worked
+        How Roman hours would work where you live
       </p>
 
       {/* Comparison visualizations */}
@@ -63,28 +72,31 @@ export default function TimeComparison({ sunriseHour, sunsetHour }: TimeComparis
               className="fill-amber-300 dark:fill-amber-500"
             />
 
-            {/* Hour markers - unevenly spaced to show stretching */}
-            {[6, 9, 12, 15, 18].map((hour) => (
-              <g key={hour}>
-                <line
-                  x1={hourToX(hour)}
-                  y1={barY - 4}
-                  x2={hourToX(hour)}
-                  y2={barY + barHeight + 4}
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="text-amber-700 dark:text-amber-400"
-                />
-                <text
-                  x={hourToX(hour)}
-                  y={barY + barHeight + 14}
-                  textAnchor="middle"
-                  className="text-[9px] fill-amber-600 dark:fill-amber-400 font-medium"
-                >
-                  {hour}:00
-                </text>
-              </g>
-            ))}
+            {/* Hour markers - positioned based on actual stretched/compressed Roman hours */}
+            {[6, 9, 12, 15, 18].map((romanHour) => {
+              const modernHour = romanHourToModernHour(romanHour);
+              return (
+                <g key={romanHour}>
+                  <line
+                    x1={hourToX(modernHour)}
+                    y1={barY - 4}
+                    x2={hourToX(modernHour)}
+                    y2={barY + barHeight + 4}
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="text-amber-700 dark:text-amber-400"
+                  />
+                  <text
+                    x={hourToX(modernHour)}
+                    y={barY + barHeight + 14}
+                    textAnchor="middle"
+                    className="text-[9px] fill-amber-600 dark:fill-amber-400 font-medium"
+                  >
+                    {romanHour}:00
+                  </text>
+                </g>
+              );
+            })}
 
             {/* Sunrise/sunset labels */}
             <text
