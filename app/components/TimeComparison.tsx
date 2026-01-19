@@ -30,11 +30,9 @@ export default function TimeComparison({ sunriseHour, sunsetHour }: TimeComparis
 
   return (
     <div className="w-full sm:max-w-sm bg-amber-50/50 dark:bg-slate-800/50 rounded-xl p-3 sm:p-4 border border-amber-200 dark:border-slate-700">
-      {/* Hook text */}
-      <p className="text-sm text-amber-800 dark:text-amber-200 text-center mb-4 leading-relaxed">
-        What if sunrise was always at 6:00 and sunset always at 18:00?
-        <br />
-        <span className="text-amber-600 dark:text-amber-400">It used to be. The hours just stretched to fit.</span>
+      {/* Header */}
+      <p className="text-sm font-medium text-amber-800 dark:text-amber-200 text-center mb-4">
+        How Roman hours worked
       </p>
 
       {/* Comparison visualizations */}
